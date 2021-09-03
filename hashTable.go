@@ -1,4 +1,4 @@
-package router
+package goRouter
 
 type RouterHashNode struct {
 	value *RouterTrieNode
