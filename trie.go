@@ -76,7 +76,6 @@ func (t *RouterTrie) AddNode(path string, handler Handler) {
 	currentNode.handler = &handler
 }
 
-// TODO: FIX THIS METHOD!!!
 func (t *RouterTrie) Lookup(path string, ps *RouterParams) *RouterTrieNode {
 	if path == "/" || path == "" {
 		return t.root
