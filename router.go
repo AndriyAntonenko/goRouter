@@ -85,6 +85,7 @@ func (r *Router) getMethodTrie(method string) *RouterTrie {
 	return trie
 }
 
+// Handler for preflights requests
 func (router *Router) corsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", router.corsConf.Origins)
 	w.Header().Set("Access-Control-Allow-Methods", router.corsConf.Methods)
