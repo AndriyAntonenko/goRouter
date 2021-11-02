@@ -88,7 +88,7 @@ func (r *Router) getMethodTrie(method string) *RouterTrie {
 func (router *Router) corsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", router.corsConf.Origins)
 	w.Header().Set("Access-Control-Allow-Methods", router.corsConf.Methods)
-	w.Header().Set("Access-Control-Allow-Headers", router.corsConf.Methods)
+	w.Header().Set("Access-Control-Allow-Headers", router.corsConf.Headers)
 	w.Header().Set("Access-Control-Max-Age", router.corsConf.MaxAge)
 	w.WriteHeader(http.StatusNoContent)
 }
